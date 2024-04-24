@@ -1,0 +1,11 @@
+CREATE TABLE Bilettkunde
+(
+    Id INTEGER AUTO_INCREMENT NOT NULL,
+    film VARCHAR(200) NOT NULL,
+    antall VARCHAR(200) NOT NULL,
+    fornavn VARCHAR(200) NOT NULL,
+    etternavn VARCHAR(200) NOT NULL,
+    telefon VARCHAR(200) NOT NULL,
+    epost VARCHAR(200) NOT NULL,
+    PRIMARY KEY (Id)
+);
