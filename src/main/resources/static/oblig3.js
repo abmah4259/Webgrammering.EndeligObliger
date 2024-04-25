@@ -99,10 +99,31 @@ function Viskunder(Biletter) {
     ut += "</table>";
     document.getElementById("kunder").innerHTML = ut;
 }
-
 //slett objekter fra tabellen/arrayet
 function Slett() {
     $.get("/Slett", function () {
         Hentnykunder();
     });
 }
+/*function Slett(id) {
+    // Bekreft med brukeren før du sletter billetten
+    const confirmed = confirm("Er du sikker på at du vil slette denne billetten?");
+
+    if (confirmed) {
+        // Bruk billettens ID for å sende en DELETE-forespørsel til serveren
+        $.ajax({
+            url: `/Slett/${id}`, // Endre URL-en i henhold til serverens API for å slette billetter
+            type: "DELETE",
+            success: function() {
+                // Hvis billetten slettes vellykket, oppdater listen over billetter
+                Hentnykunder();
+            },
+            error: function() {
+                // Håndter eventuelle feil som måtte oppstå
+                alert("Noe gikk galt under sletting av billetten. Prøv på nytt senere.");
+            }
+        });
+    }
+}*/
+
+

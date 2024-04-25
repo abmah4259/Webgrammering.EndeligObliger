@@ -1,6 +1,7 @@
 package oslomet.webprogram.innlevering_oblig3;
 
 public class Bilettkunde {
+    private int id;
     private String film;
     private String antall;
     private String telefon;
@@ -19,8 +20,16 @@ public class Bilettkunde {
         this.fornavn = fornavn;
         this.etternavn = etternavn;
         this.epost = epost;
+        this.id = id;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getFornavn() {
         return fornavn;

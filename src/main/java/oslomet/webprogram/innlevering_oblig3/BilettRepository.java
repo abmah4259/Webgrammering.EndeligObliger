@@ -24,7 +24,7 @@ public class BilettRepository {
     }
     public void slettkunde(){
         //Slette en kunde om gangen
-        String SQL = "DELETE FROM Bilettkunde";
+        String SQL = "DELETE FROM Bilettkunde ";
         db.update(SQL);
     }
 }
