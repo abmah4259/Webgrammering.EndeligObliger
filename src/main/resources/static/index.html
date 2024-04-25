@@ -1,10 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Bestiling av kinobiletter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+            src="oblig3.js" type="application/javascript">
+    </script>
 </head>
 <body>
-$END$
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Oslo Kino</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="#">Kinoprogram</a>
+                <a class="nav-link" href="#">Filmer</a>
+                <a class="nav-link" href="#">KinoPluss</a>
+                <a class="nav-link disabled" aria-disabled="true">Meny</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <main class="main-content">
+                <h2> Bestilling av KinoBilletter</h2>
+                <div id="BillettRegistering">
+                    <div class="form-group">
+                        <label for="film">Valg av Film</label>
+                        <select id="film" class="form-control">
+                            <option selected disabled> Velg av Film </option>
+                            <option> Barbie </option>
+                            <option> Notebook </option>
+                            <option> Poor Things </option>
+                            <option> Avangers </option>
+                            <option> Men in black 2 </option>
+                            <option> Mean girls </option>
+                        </select>
+                        <span id="feilfilm" style="color:red"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="antall"> Antall </label>
+                        <input type="number" id="antall" class="form-control"  min="1" max="100" required>
+                        <span id="antallError" style="color:red"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="fornavn"> Fornavn </label>
+                        <input type="text" id="fornavn" class="form-control"  required>
+                        <span id="fornavnError" style="color:red"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="etternavn"> Etternavn </label>
+                        <input type="text" id="etternavn" class="form-control"  required>
+                        <span id="etternavnError"  style="color:red"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefon"> Telefon </label>
+                        <input type="tel" id="telefon" class="form-control" required>
+                        <span id="telefonError" style="color:red"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="epost"> Epost </label>
+                        <input type="email" id="epost" class="form-control"  required>
+                        <span id="epostError" style="color:red"></span>
+                    </div>
+                    <div class="d-flex justify-content-start">
+                        <button class="btn btn-success" onclick="KjopBilett()"> Kjøp Billetter </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="col-md-8">
+            <h3>Alle billetter</h3>
+            <div id="kunder"  class="table-responsive"></div>
+            <button class="btn btn-danger" onclick="Slett()">Slett alle billetter</button>
+        </div>
+    </div>
+</div>
 </body>
 </html>
